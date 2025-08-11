@@ -21,4 +21,4 @@ The app allows users to:
 - JavaScript (DOM Manipulation & LocalStorage)
 
 
-##Deployment Link : https://to-do-list-two-theta-94.vercel.app/
+## Deployment Link : https://to-do-list-two-theta-94.vercel.app/
