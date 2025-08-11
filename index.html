@@ -1,48 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>T0-Do List</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <h1 class="title">To-Do List</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Man Stark Task Manager</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <h1>To Do List</h1>
     <div class="wrapper">
-      <form>
-        <input
-          id="todo-input"
-          type="text"
-          placeholder="Your Task"
-          autocomplete="off"
-        />
-        <button id="add-button">Add</button>
-      </form>
-      <ul class="todo-list">
-        <li class="todo">
-          <input type="checkbox" id="todo-1" />
-          
-          <label for="todo-1" class="todo-text">
-            webdev project with html css and js
-          </label>
-          <button class="delete-button">
-            <img   src="./delete-svgrepo-com.svg" alt="delete" />
-          </button>
-        </li>
-        <li class="todo">
-          <input type="checkbox" id="todo-2" />
-        
-          <label for="todo-2" class="todo-text">
-            webdev project with html css and js
-          </label>
-          <button class="delete-button">
-            <img src="./delete-svgrepo-com.svg" alt="delete" />
-          </button>
-        </li>
-      </ul>
+        <form>
+            <input id="todo-input" type="text" 
+            placeholder="New task" autocomplete="off">
+            <button id="add-button">Deploy Task</button>
+        </form>
+        <ul id="todo-list">
+            <!-- Example todo item -->
+            <!-- <li class="todo">
+                <input type="checkbox" id="todo-1">
+                <label class="custom-checkbox" for="todo-1">
+                    <svg fill="transparent" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                        <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
+                    </svg>
+                </label>
+                <label for="todo-1" class="todo-text">
+                    Calibrate repulsor array
+                </label>
+                <button class="delete-button">
+                    <svg fill="var(--danger-color)" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                        <path d="M480-200 240-440l56-56 184 184 184-184 56 56-240 240Zm0-240-240-240 56-56 184 184 184-184 56 56-240 240Z"/>
+                    </svg>
+                </button>
+            </li> -->
+        </ul>
     </div>
-
-    <script src="./script.js" />
-    <script />
-  </body>
+</body>
 </html>
