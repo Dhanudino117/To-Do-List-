@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iron Man Stark Task Manager</title>
+    <title>Task Manager</title>
     <link rel="icon" type="image/png" href="../images/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
 </head>
 <body>
-    <h1>To Do List</h1>
+    <h1>To-Do List</h1>
     <div class="wrapper">
-        <form>
-            <input id="todo-input" type="text" 
-            placeholder="New task" autocomplete="off">
-            <button id="add-button">Deploy Task</button>
+        <form class="form">
+            <div class="input-container">
+                <input id="todo-input" type="text" placeholder="Add a new task" autocomplete="off">
+                <span id="error-message" class="error-message"></span>
+            </div>
+            <button id="add-button">Add Task</button>
         </form>
         <ul id="todo-list">
             <!-- Example todo item -->
@@ -26,12 +28,15 @@
                         <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
                     </svg>
                 </label>
-                <label for="todo-1" class="todo-text">
-                    Calibrate repulsor array
-                </label>
+                <label for="todo-1" class="todo-text">Sample task</label>
+                <button class="edit-button">
+                    <svg fill="var(--accent-color)" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                        <path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 28-11t28 11l57 57q11 12 11 28t-11 28L233-250H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/>
+                    </svg>
+                </button>
                 <button class="delete-button">
                     <svg fill="var(--danger-color)" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                        <path d="M480-200 240-440l56-56 184 184 184-184 56 56-240 240Zm0-240-240-240 56-56 184 184 184-184 56 56-240 240Z"/>
+                        <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/>
                     </svg>
                 </button>
             </li> -->
