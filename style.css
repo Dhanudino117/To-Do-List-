@@ -1,0 +1,141 @@
+:root {
+  --background: #101114;
+  --primary-color: #1c1d20;
+  --secondary-color: #4a4d57;
+  --accent-color: #00ffc4;
+  --text-color: #f9f9f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16pt;
+  color: var(--text-color);
+}
+
+body {
+  min-height: 100vh;
+  padding: 10px;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 800;
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+.wrapper {
+  max-width: 100%;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#todo-input {
+  box-sizing: border-box;
+  padding: 12px 20px;
+  width: 100%;
+  background: none;
+  border: 2px solid var(--secondary-color);
+  font: inherit;
+  color: var(--text-color);
+  caret-color: var(--accent-color);
+  border-radius: 1000px;
+}
+
+#todo-input:focus {
+  outline: none;
+}
+form {
+  position: relative;
+}
+#add-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--accent-color);
+  height: 100%;
+  padding: 0 30px;
+  border-radius: 1000px;
+  font-weight: 600;
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  color: var(--background);
+}
+
+.todo {
+  background-color: var(--primary-color);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.todo .todo-text {
+  padding: 15px;
+  padding-right: 0;
+  flex-grow: 1;
+}
+
+.delete-button {
+  width: 40px;
+  height: 40px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+}
+.delete-button:hover {
+  transition: 400ms;
+  background-color: red;
+  box-shadow: 0 0 10px red;
+  transition: 0.3s ease;
+  transform: scale(1.05);
+}
+.delete-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.custom-checkbox {
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  min-height: 20px;
+  min-width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+input[type="checkbox"] {
+  position: absolute;  
+  opacity: 0;         
+  width: 0;
+  height: 0;
+}
+
+
+input[type="checkbox"]:checked ~ .todo-text {
+  text-decoration: line-through;
+  text-decoration-color: var(--accent-color);
+  text-decoration-thickness: 2px;
+  color:rgb(109, 109, 109)
+}
